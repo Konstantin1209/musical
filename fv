@@ -37,15 +37,15 @@ CREATE TABLE IF NOT EXISTS GenreArtist (
 );
 
 CREATE TABLE IF NOT EXISTS ArtistAlbum (
-	artist		      INTEGER 	  REFERENCES  Artist_list(artist_id),
+	artist		INTEGER 	  REFERENCES  Artist_list(artist_id),
 	album           INTEGER		  REFERENCES  Music_album(album_id),
 	 							  CONSTRAINT  pk_1 
 								  PRIMARY KEY (artist, album)
 );
 
 CREATE TABLE IF NOT EXISTS collectionTrack (
-	track  			    INTEGER       REFERENCES  Track_list(track_id),
+	track           INTEGER       REFERENCES  Track_list(track_id),
 	collection      INTEGER       REFERENCES  Collection_list(collection_id),
-							    CONSTRAINT  pk_2 
+							          CONSTRAINT  pk_2 
 								  PRIMARY KEY (track, collection)
 );
